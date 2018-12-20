@@ -2,14 +2,14 @@ package org.researchstack.backboneapp;
 
 import android.app.Application;
 
-import org.researchstack.backbone.StorageAccess;
-import org.researchstack.backbone.storage.database.AppDatabase;
-import org.researchstack.backbone.storage.database.sqlite.DatabaseHelper;
-import org.researchstack.backbone.storage.file.EncryptionProvider;
-import org.researchstack.backbone.storage.file.FileAccess;
-import org.researchstack.backbone.storage.file.PinCodeConfig;
-import org.researchstack.backbone.storage.file.SimpleFileAccess;
-import org.researchstack.backbone.storage.file.UnencryptedProvider;
+import org.researchstack.feature.authentication.pincode.PinCodeConfig;
+import org.researchstack.feature.storage.StorageAccess;
+import org.researchstack.feature.storage.database.AppDatabase;
+import org.researchstack.feature.storage.database.sqlite.DatabaseHelper;
+import org.researchstack.feature.storage.file.EncryptionProvider;
+import org.researchstack.feature.storage.file.FileAccess;
+import org.researchstack.feature.storage.file.SimpleFileAccess;
+import org.researchstack.feature.storage.file.UnencryptedProvider;
 
 
 public class BackboneApplication extends Application

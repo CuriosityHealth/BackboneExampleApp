@@ -211,7 +211,7 @@ public class MainActivity extends PinCodeActivity
     {
         ConsentDocument document = new ConsentDocument();
         document.setTitle("Demo Consent");
-        document.setSignaturePageTitle(R.string.rsb_consent);
+        document.setSignaturePageTitle(R.string.rsfc_consent);
 
         // Create consent visual sections
         ConsentSection section1 = new ConsentSection(ConsentSection.Type.DataGathering);
@@ -221,9 +221,9 @@ public class MainActivity extends PinCodeActivity
 
         // ...add more sections as needed, then create a visual consent step
         ConsentVisualStep visualStep = new ConsentVisualStep(VISUAL_CONSENT_IDENTIFIER);
-        visualStep.setStepTitle(R.string.rsb_consent);
+        visualStep.setStepTitle(R.string.rsfc_consent);
         visualStep.setSection(section1);
-        visualStep.setNextButtonString(getString(R.string.rsb_next));
+        visualStep.setNextButtonString(getString(R.string.rsf_next));
 
         // Create consent signature object and set what info is required
         ConsentSignature signature = new ConsentSignature();
@@ -233,11 +233,11 @@ public class MainActivity extends PinCodeActivity
         // Create our HTML to show the user and have them accept or decline.
         StringBuilder docBuilder = new StringBuilder(
                 "</br><div style=\"padding: 10px 10px 10px 10px;\" class='header'>");
-        String title = getString(R.string.rsb_consent_review_title);
+        String title = getString(R.string.rsfc_consent_review_title);
         docBuilder.append(String.format(
                 "<h1 style=\"text-align: center; font-family:sans-serif-light;\">%1$s</h1>",
                 title));
-        String detail = getString(R.string.rsb_consent_review_instruction);
+        String detail = getString(R.string.rsfc_consent_review_instruction);
         docBuilder.append(String.format("<p style=\"text-align: center\">%1$s</p>", detail));
         docBuilder.append("</div></br>");
         docBuilder.append("<div><h2> HTML Consent Doc goes here </h2></div>");
@@ -245,13 +245,13 @@ public class MainActivity extends PinCodeActivity
         // Create the Consent doc step, pass in our HTML doc
         ConsentDocumentStep documentStep = new ConsentDocumentStep(CONSENT_DOC);
         documentStep.setConsentHTML(docBuilder.toString());
-        documentStep.setConfirmMessage(getString(R.string.rsb_consent_review_reason));
+        documentStep.setConfirmMessage(getString(R.string.rsfc_consent_review_reason));
 
         // Create Consent form step, to get users first & last name
         FormStep formStep = new FormStep(SIGNATURE_FORM_STEP,
                 "Form Title",
                 "Form step description");
-        formStep.setStepTitle(R.string.rsb_consent);
+        formStep.setStepTitle(R.string.rsfc_consent);
 
         TextAnswerFormat format = new TextAnswerFormat();
         format.setIsMultipleLines(false);
@@ -261,9 +261,9 @@ public class MainActivity extends PinCodeActivity
 
         // Create Consent signature step, user can sign their name
         ConsentSignatureStep signatureStep = new ConsentSignatureStep(SIGNATURE);
-        signatureStep.setStepTitle(R.string.rsb_consent);
-        signatureStep.setTitle(getString(R.string.rsb_consent_signature_title));
-        signatureStep.setText(getString(R.string.rsb_consent_signature_instruction));
+        signatureStep.setStepTitle(R.string.rsfc_consent);
+        signatureStep.setTitle(getString(R.string.rsfc_consent_signature_title));
+        signatureStep.setText(getString(R.string.rsfc_consent_signature_instruction));
         signatureStep.setSignatureDateFormat(signature.getSignatureDateFormatString());
         signatureStep.setOptional(false);
         signatureStep.setStepLayoutClass(ConsentSignatureStepLayout.class);
@@ -338,8 +338,8 @@ public class MainActivity extends PinCodeActivity
         QuestionStep booleanStep = new QuestionStep(NUTRITION);
         booleanStep.setStepTitle(R.string.survey);
         booleanStep.setTitle("Do you take nutritional supplements?");
-        booleanStep.setAnswerFormat(new BooleanAnswerFormat(getString(R.string.rsb_yes),
-                getString(R.string.rsb_no)));
+        booleanStep.setAnswerFormat(new BooleanAnswerFormat(getString(R.string.rsf_yes),
+                getString(R.string.rsf_no)));
         booleanStep.setOptional(false);
 
         QuestionStep multiStep = new QuestionStep(MULTI_STEP);

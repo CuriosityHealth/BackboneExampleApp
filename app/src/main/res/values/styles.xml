@@ -3,9 +3,9 @@
     <!-- Base application theme. -->
     <style name="Theme.BackboneApp" parent="Theme.Backbone">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/rsb_colorPrimary</item>
-        <item name="colorPrimaryDark">@color/rsb_colorPrimaryDark</item>
-        <item name="colorAccent">@color/rsb_colorAccent</item>
+        <item name="colorPrimary">@color/rsf_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/rsf_colorPrimaryDark</item>
+        <item name="colorAccent">@color/rsf_colorAccent</item>
         <item name="alertDialogTheme">@style/Theme.BackboneApp.Dialog</item>
         <item name="toolbarTheme">@style/Theme.BackboneApp.Toolbar</item>
     </style>
@@ -18,14 +18,14 @@
     </style>
 
     <style name="Theme.BackboneApp.Toolbar.Transparent">
-        <item name="colorControlNormal">@color/rsb_warm_gray</item>
+        <item name="colorControlNormal">@color/rsf_warm_gray</item>
         <item name="colorPrimary">@android:color/white</item>
         <item name="toolbarStyle">@style/Widget.BackboneApp.Toolbar.Transparent</item>
     </style>
 
     <style name="Theme.BackboneApp.Dialog" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorPrimary">@color/rsb_warm_gray</item>
+        <item name="android:textColorPrimary">@color/rsf_warm_gray</item>
         <item name="android:background">@android:color/white</item>
     </style>
 
@@ -52,7 +52,7 @@
     </style>
 
     <style name="TextAppearance.Widget.BackboneApp.Toolbar.Title.Transparent">
-        <item name="android:textColor">@color/rsb_warm_gray</item>
+        <item name="android:textColor">@color/rsf_warm_gray</item>
     </style>
 
 

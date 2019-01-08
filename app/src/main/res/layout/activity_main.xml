@@ -8,7 +8,7 @@
     tools:context="org.researchstack.backboneapp.MainActivity"
 >
 
-    <include layout="@layout/rsb_layout_toolbar"/>
+    <include layout="@layout/rsf_layout_toolbar"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
